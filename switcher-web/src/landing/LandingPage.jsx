@@ -3,8 +3,6 @@ import { loginUser } from '../api/token/actions';
 import { connect } from 'react-redux';
 import LandingPageBody from './components/LandingPageBody';
 
-import './styles/index.scss';
-
 const LandingPage = (props) => {
   props.dispatch(loginUser({username: 'rain', password: 'asdasdasd'}));
   return (

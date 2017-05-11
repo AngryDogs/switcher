@@ -1,3 +1,26 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@font-face {
+  font-family: 'LibreFranklin';
+  src: url('./resources/fonts/LibreFranklin-Regular.ttf'); /* IE9 Compat Modes */
+  src: url('./resources/fonts/LibreFranklin-Regular.ttf') format('embedded-opentype'), /* IE6-IE8 */
+       url('./resources/fonts/LibreFranklin-Regular.ttf') format('woff2'), /* Super Modern Browsers */
+       url('./resources/fonts/LibreFranklin-Regular.ttf') format('woff'), /* Pretty Modern Browsers */
+       url('./resources/fonts/LibreFranklin-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./resources/fonts/LibreFranklin-Regular.ttf') format('svg'); /* Legacy iOS */
+}
+
 body {
-  background-color: #000;
+  font-family: 'LibreFranklin', Fallback, sans-serif;
+}
+
+.custom-button {
+  background-color: #070342;
+  border-color: #070342;
+  margin-top: 140px;
+  width: 100%;
+}
+
+.container-margin {
+  margin-top: 20vh;
 }

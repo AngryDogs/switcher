@@ -31,31 +31,36 @@
     "http-proxy-middleware": "0.17.3",
     "jest": "18.1.0",
     "json-loader": "0.5.4",
+    "node-sass": "^4.5.2",
+    "npm-run-all": "^4.0.2",
     "object-assign": "4.1.1",
     "postcss-loader": "1.2.2",
     "promise": "7.1.1",
     "react-dev-utils": "^0.5.2",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
+    "webpack": "1.14.0",
     "webpack-dev-server": "1.16.2",
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.2"
   },
   "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
     "react-router": "^4.0.0",
-    "react-router-dom": "^4.0.0",
+    "react-router-dom": "^4.1.1",
     "react-router-redux": "^4.0.8",
-    "react-thunk": "^1.0.0",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0",
-    "webpack": "^2.4.1"
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build-css": "node-sass src/ -o src/",
+    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
+    "start-js": "node scripts/start.js",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
