@@ -5,8 +5,8 @@ const LoginForm = () => (
     <div className="container">
       <form>
         <div className="login-form-header">
-          <h4>LOGIN</h4>
-          <p>Login to access your smart home</p>
+          <h4>Sign in to your smart home</h4>
+          <hr />
           <div className="input-group custom-input-first custom-input-margin">
             <input type="text" className="form-control" placeholder="Username" aria-describedby="basic-addon1" />
           </div>

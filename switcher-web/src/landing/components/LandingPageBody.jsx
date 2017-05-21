@@ -1,15 +1,11 @@
 import React from 'react';
 import LoginForm from './LoginForm';
-import Introduction from './Introduction';
 
 const LandingPageBody = () => (
   <div className="landingpage-body">
     <div className="container container-margin">
       <div className="row">
-        <div className="col-sm-8">
-          <Introduction />
-        </div>
-        <div className="col-sm-4">
+        <div className="col-sm-8 offset-sm-2">
           <LoginForm />
         </div>
       </div>

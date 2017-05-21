@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { withRouter, Redirect } from 'react-router-dom';
-import { verifyToken } from '../api/token/actions';
+import { verifyToken, loginUser } from '../api/token/actions';
 import { connect } from 'react-redux';
 
 const Dashboard = (props) => {
-  console.log(props.token);
+  console.log(props);
   const { verifing, verifyed } = props.token;
   if((verifing && !verifyed) || (!verifing && !verifyed)) {
     return (
@@ -18,7 +18,10 @@ const Dashboard = (props) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return { verify: dispatch(verifyToken())}
+  return {
+    verify: dispatch(verifyToken()),
+    login: dispatch(loginUser({username: "rain", password: "asdasdasd"}))
+  }
 }
 
 const mapStateToProps = (state) => {
