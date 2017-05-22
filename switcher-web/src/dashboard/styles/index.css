@@ -1,0 +1,93 @@
+.sidebar {
+  width: 280px;
+  height: 100%;
+  position: absolute;
+  background-color: #1a1a1a; }
+
+.sidebar h2 {
+  color: #fff;
+  margin: 10px; }
+
+.sidebar-list {
+  width: 300px;
+  margin-top: 50px;
+  margin-left: -40px; }
+
+.sidebar-item {
+  border-left: 2px solid #ec1b5a;
+  margin-top: 5px;
+  height: 50px;
+  padding-top: 14px;
+  padding-left: 30px;
+  color: #fff;
+  border-radius: 0 3px 3px 0; }
+
+ul {
+  list-style-type: none; }
+
+.sidebar-item:hover {
+  background-color: #ec1b5a;
+  cursor: pointer; }
+
+.sidebar-item:focus {
+  background-color: #fff !important; }
+
+.navbar {
+  background-color: #070342 !important;
+  color: #fff; }
+
+@media screen and (max-width: 1023px) {
+  .sidebar {
+    visibility: hidden; } }
+
+@media screen and (min-width: 1024px) {
+  .navbar-div {
+    visibility: hidden; } }
+
+.devices {
+  margin-top: 100px; }
+
+.devices-list {
+  width: 100%;
+  background-color: #f1f1f1;
+  min-width: 500px;
+  border-radius: 3px;
+  box-shadow: 0 0 0.5px #000;
+  padding: 30px; }
+
+.device {
+  width: 200px;
+  height: 250px;
+  border: 1px solid #636262;
+  padding: 20px;
+  border-radius: 3px;
+  position: relative;
+  text-align: center; }
+
+.on-off-button-outer {
+  text-align: center;
+  border: 4px solid #ec1b5a;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  padding-top: 14px;
+  margin: 100px auto;
+  box-shadow: 0 0 3px #ec1b5a; }
+
+.on-off-button-outer:hover {
+  background-color: #ec1b5a;
+  color: #fff; }
+
+.on-off-button-outer:hover .on-off-button {
+  color: #fff; }
+
+.on-off-button-on {
+  background-color: #ec1b5a !important; }
+
+.on-off-button-on .on-off-button {
+  color: #fff; }
+
+.on-off-button {
+  bottom: 0 !important;
+  font-size: 40px !important;
+  color: #ec1b5a; }

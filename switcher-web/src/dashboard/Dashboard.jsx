@@ -1,18 +1,22 @@
 import React from 'react';
+import Sidebar from './components/Sidebar';
+import Navbar from './components/Navbar';
+import Devices from './components/Devices';
 
 import { withRouter, Redirect } from 'react-router-dom';
 import { verifyToken, loginUser } from '../api/token/actions';
 import { connect } from 'react-redux';
 
 const Dashboard = (props) => {
-  console.log(props);
   const { verifing, verifyed } = props.token;
   if((verifing && !verifyed) || (!verifing && !verifyed)) {
     return (
     <div> Loading </div>
   )} else return verifyed && !verifing ? (
     <div>
-      I am dashboard
+      <Sidebar />
+      <Navbar />
+      <Devices />
     </div>
   ) : (<Redirect to="/login" />);
 }
