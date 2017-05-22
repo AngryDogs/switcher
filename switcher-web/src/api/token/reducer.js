@@ -17,6 +17,7 @@ export default function token(state = initialState, response) {
       return {...state, verifing: false, verifyed: true};
     case 'TOKEN_ERROR':
       state.error = response.err;
+      console.log(response);
       return {...state, verifing: false, verifyed: false, error: response.err};
     default:
       return state;

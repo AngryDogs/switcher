@@ -1,10 +1,7 @@
 import React from 'react';
-import { loginUser } from '../api/token/actions';
-import { connect } from 'react-redux';
 import LandingPageBody from './components/LandingPageBody';
 
 const LandingPage = (props) => {
-  props.dispatch(loginUser({username: 'rain', password: 'asdasdasd'}));
   return (
     <div>
       <LandingPageBody />
@@ -12,4 +9,4 @@ const LandingPage = (props) => {
   );
 }
 
-export default connect()(LandingPage);
+export default LandingPage;

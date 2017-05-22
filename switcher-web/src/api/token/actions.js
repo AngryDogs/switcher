@@ -20,8 +20,12 @@ export const refreshToken = () => {
 export const loginUser = (payload) => {
   return dispatch => {
     login(payload).then(res => {
-      document.cookie = `token=${res.token}`;
-      dispatch({ type: 'LOGIN', ...res });
+      console.log(res.non_field_errors);
+      if(res.non_field_errors) dispatch({ type: 'LOGIN_ERROR', err:res.non_field_errors[0]});
+      else {
+        document.cookie = `token=${res.token}`;
+        dispatch({ type: 'LOGIN', ...res });
+      }
     }).catch(err => {
       dispatch({ type: 'LOGIN_ERROR', err });
     });

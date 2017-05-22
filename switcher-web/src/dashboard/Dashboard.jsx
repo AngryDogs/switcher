@@ -4,12 +4,12 @@ import Navbar from './components/Navbar';
 import Devices from './components/Devices';
 
 import { withRouter, Redirect } from 'react-router-dom';
-import { verifyToken, loginUser } from '../api/token/actions';
+import { verifyToken } from '../api/token/actions';
 import { connect } from 'react-redux';
 
 const Dashboard = (props) => {
   const { verifing, verifyed } = props.token;
-  if((verifing && !verifyed) || (!verifing && !verifyed)) {
+  if((verifing && !verifyed)) {
     return (
     <div> Loading </div>
   )} else return verifyed && !verifing ? (
@@ -18,13 +18,12 @@ const Dashboard = (props) => {
       <Navbar />
       <Devices />
     </div>
-  ) : (<Redirect to="/login" />);
+  ) : (<Redirect to="/" />);
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     verify: dispatch(verifyToken()),
-    login: dispatch(loginUser({username: "rain", password: "asdasdasd"}))
   }
 }
 
