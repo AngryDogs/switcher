@@ -15,7 +15,7 @@ app.get('/devices', function (req, res) {
   });
 });
 
-app.post('/switch', function (req, res) {
+app.post('/device/update', function (req, res) {
   client.startDiscovery().on('plug-new', (plug) => {
     plug.getPowerState().then(response => {
       plug.setPowerState(!response);

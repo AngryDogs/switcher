@@ -19,10 +19,15 @@ from rest_framework_jwt.views import obtain_jwt_token
 from rest_framework_jwt.views import refresh_jwt_token
 from rest_framework_jwt.views import verify_jwt_token
 
+from devices.views import ChangeDeviceStateView
+from devices.views import GetDevicesView
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/auth/login', obtain_jwt_token),
     url(r'^api/auth/token/verify', verify_jwt_token),
     url(r'^api/auth/token/refresh', refresh_jwt_token),
+    url(r'^api/devices/all', GetDevicesView.as_view()),
+    url(r'^api/devices/update', ChangeDeviceStateView.as_view()),
 ]

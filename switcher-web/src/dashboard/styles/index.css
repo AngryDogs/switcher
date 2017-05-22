@@ -3,9 +3,10 @@
   height: 100%;
   position: absolute;
   background-color: #1a1a1a; }
-  .sidebar h2 {
-    color: #fff;
-    margin: 10px; }
+
+.sidebar h2 {
+  color: #fff;
+  margin: 10px; }
 
 .sidebar-list {
   width: 300px;
@@ -76,13 +77,15 @@ ul {
 .on-off-button-outer:hover {
   background-color: #ec1b5a;
   color: #fff; }
-  .on-off-button-outer:hover .on-off-button {
-    color: #fff; }
+
+.on-off-button-outer:hover .on-off-button {
+  color: #fff; }
 
 .on-off-button-on {
   background-color: #ec1b5a !important; }
-  .on-off-button-on .on-off-button {
-    color: #fff; }
+
+.on-off-button-on .on-off-button {
+  color: #fff; }
 
 .on-off-button {
   bottom: 0 !important;

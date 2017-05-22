@@ -27,7 +27,3 @@ export function login(payload) {
     return err;
   });
 }
-
-export function refresh(payload) {
-
-}

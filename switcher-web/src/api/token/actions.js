@@ -1,4 +1,4 @@
-import {verify, login, refresh} from './calls';
+import {verify, login } from './calls';
 
 export const verifyToken = () => {
   const token = getCookie("token");
@@ -11,10 +11,6 @@ export const verifyToken = () => {
       dispatch({ type: 'TOKEN_ERROR', err });
     });
   }
-}
-
-export const refreshToken = () => {
-
 }
 
 export const loginUser = (payload) => {
